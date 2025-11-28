@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background: #0c0c82;
+background: linear-gradient(135deg, rgb(31, 42, 88,) 0%, rgb(10, 15, 38) 100%);
+overflow: hidden;
+}
+
+/* header layout */
+
+header {
+position: absolute;
+right: 0;
+top: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-size: 30px;
+line-height: 1.5;
+text-align: right;
+margin: 40px;
+}
+
+h1 {
+    color: white;
+    letter-spacing: 3px;
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    color: #FFD029;
+    font-family: 'Lora', serif;
+    letter-spacing: 3px;
+}
+
+/* main layout */
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sun {
+    width: 200px;
+}
+
+#tellus {
+    cursor: pointer;
+}
+
+/* overlay stylingen */
+
+.modal {
+    position: fixed;
+    background: #0c0c82;
+background: linear-gradient(135deg, rgb(31, 42, 88,) 0%, rgb(10, 15, 38) 100%);
+    padding: 1rem;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.modal svg {
+    position: relative;
+    z-index: 1;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.x {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    z-index: 1000;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
