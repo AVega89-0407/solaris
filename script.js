@@ -1,4 +1,12 @@
+const sunBtn = document.getElementById("sun")
+const mercuryBtn = document.getElementById("mercury")
+const venusBtn = document.getElementById("venus")
 const tellusBtn = document.getElementById("tellus")
+const marsBtn = document.getElementById("mars")
+const jupiterBtn = document.getElementById("jupiter")
+const saturnusBtn = document.getElementById("saturnus")
+const uranusBtn = document.getElementById("uranus")
+const neptunusBtn = document.getElementById("neptunus")
 const x = document.querySelector(".x")
 const modal = document.querySelector(".modal")
 const overlay = document.querySelector(".overlay")
@@ -9,7 +17,15 @@ const open = function () {
   overlay.classList.remove('hidden');
 }
 
+sunBtn.addEventListener('click', open)
+mercuryBtn.addEventListener('click', open)
+venusBtn.addEventListener('click', open)
 tellusBtn.addEventListener('click', open)
+marsBtn.addEventListener('click', open)
+jupiterBtn.addEventListener('click', open)
+saturnusBtn.addEventListener('click', open)
+uranusBtn.addEventListener('click', open)
+neptunusBtn.addEventListener('click', open)
 
 const close = function(){
    modal.classList.add('hidden');
@@ -19,7 +35,3 @@ const close = function(){
 x.addEventListener('click', close);
 overlay.addEventListener('click', close)
 
-// let resp = await fetch('https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com/bodies', {
-//     method: 'GET',
-// })
-// console.log(resp);

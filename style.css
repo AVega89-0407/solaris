@@ -5,8 +5,7 @@
 }
 
 body {
-background: #0c0c82;
-background: linear-gradient(135deg, rgb(31, 42, 88,) 0%, rgb(10, 15, 38) 100%);
+background: linear-gradient(135deg, #0a0f26 0%, #1f2a58 100%);
 overflow: hidden;
 }
 
@@ -16,24 +15,24 @@ header {
 position: absolute;
 right: 0;
 top: 0;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 400;
-font-size: 30px;
 line-height: 1.5;
 text-align: right;
 margin: 40px;
 }
 
 h1 {
-    color: white;
-    letter-spacing: 3px;
-    font-family: "Roboto", sans-serif;
+color: white;
+font-family: 'Roboto', serif;
+font-weight: 400;
+font-size: 60px;
+
 }
 
 p {
     color: #FFD029;
     font-family: 'Lora', serif;
     letter-spacing: 3px;
+    font-size: 30px;
 }
 
 /* main layout */
@@ -50,16 +49,20 @@ main {
     width: 200px;
 }
 
-#tellus {
+#sun, #mercury, #venus, #tellus, #mars, #jupiter, #saturnus, #uranus, #neptunus {
     cursor: pointer;
 }
 
 /* overlay stylingen */
 
 .modal {
+    display: flex;
     position: fixed;
-    background: #0c0c82;
-background: linear-gradient(135deg, rgb(31, 42, 88,) 0%, rgb(10, 15, 38) 100%);
+    line-height: 1.5;
+    background: linear-gradient(135deg, #0a0f26 0%, #1f2a58 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 1rem;
     width: 100%;
     z-index: 1000;
@@ -69,6 +72,30 @@ background: linear-gradient(135deg, rgb(31, 42, 88,) 0%, rgb(10, 15, 38) 100%);
 .modal svg {
     position: relative;
     z-index: 1;
+}
+
+form {
+    justify-self: center;
+    align-self: center;
+    width: 500px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(30%, 0%);
+
+}
+
+#planetRubrik {
+    color: #FFD029;
+    font-family: 'Lora', serif;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+form p {
+    color: white;
+    font-size: 12px;
+
 }
 
 
