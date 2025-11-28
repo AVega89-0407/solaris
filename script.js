@@ -27,6 +27,7 @@ saturnusBtn.addEventListener('click', open)
 uranusBtn.addEventListener('click', open)
 neptunusBtn.addEventListener('click', open)
 
+//funktion för att stänga ner overlayen
 const close = function(){
    modal.classList.add('hidden');
   overlay.classList.add('hidden');
