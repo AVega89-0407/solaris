@@ -1,3 +1,22 @@
+
+
+//anropa till api nyckeln
+
+// async function test() {
+//   let resp = await fetch('https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com', {
+//     method: 'GET',
+//     headers: {'x-zocom': 'solaris-HipRojQEq5sRjt3s'},
+  
+// })
+// let data = await resp.json();
+// console.log(data);
+// }
+
+// test();
+
+
+
+
 const sunBtn = document.getElementById("sun")
 const mercuryBtn = document.getElementById("mercury")
 const venusBtn = document.getElementById("venus")

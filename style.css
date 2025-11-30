@@ -22,9 +22,10 @@ margin: 40px;
 
 h1 {
 color: white;
-font-family: 'Roboto', serif;
+font-family: 'Secular One';
 font-weight: 400;
 font-size: 60px;
+letter-spacing: 9px;
 
 }
 
@@ -67,11 +68,6 @@ main {
     z-index: 1000;
 }
 
-
-.modal svg {
-    position: relative;
-    z-index: 1;
-}
 
 form {
     justify-self: center;
