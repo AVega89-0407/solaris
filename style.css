@@ -46,11 +46,13 @@ main {
     align-items: center;
 }
 
-.sun {
+.solen {
     width: 200px;
+    cursor: pointer;
 }
 
-#sun, #mercury, #venus, #tellus, #mars, #jupiter, #saturnus, #uranus, #neptunus {
+.planets {
+    pointer-events: auto;
     cursor: pointer;
 }
 
