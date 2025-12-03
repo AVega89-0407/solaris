@@ -32,7 +32,7 @@ letter-spacing: 9px;
 p {
     color: #FFD029;
     font-family: 'Lora', serif;
-    letter-spacing: 3px;
+    letter-spacing: 9px;
     font-size: 30px;
 }
 
@@ -51,15 +51,18 @@ main {
     cursor: pointer;
 }
 
+
 .planets {
     pointer-events: auto;
     cursor: pointer;
 }
 
+
 /* overlay stylingen */
 
-.modal {
+.planet-details {
     display: flex;
+    align-items: center;
     position: fixed;
     line-height: 1.5;
     background: linear-gradient(135deg, #0a0f26 0%, #1f2a58 100%);
@@ -67,22 +70,27 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    height: 100%;
     z-index: 1000;
 }
 
 
-form {
-    justify-self: center;
-    align-self: center;
+.planet-details form {
     width: 500px;
     position: relative;
     top: 0;
     left: 0;
-    transform: translate(30%, 0%);
-
+    transform: translate(100%, 100%);
+    display: flex;
+    flex-direction: column;
 }
 
-#planetRubrik {
+form h1 {
+    font-family: 'Secular One';
+    text-transform: uppercase;
+}
+
+#planetTitle {
     color: #FFD029;
     font-family: 'Lora', serif;
     letter-spacing: 3px;
@@ -91,16 +99,10 @@ form {
 
 form p {
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Roboto', serif;
-}
-
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 900;
+    letter-spacing: 3px;
+    line-height: 1.5;
 }
 
 .x {
@@ -113,8 +115,4 @@ form p {
     z-index: 1000;
     color: white;
     cursor: pointer;
-}
-
-.hidden {
-    display: none;
 }

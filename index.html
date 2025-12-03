@@ -16,11 +16,11 @@
             <h1>SOLSYSTEMET</h1>
             <P>SOLARIS</P>
         </header>
-        <section class="solen">
-    <svg id="0" data-planet="solen"
+        <section>
+    <svg id="0" class="solen"
     width="250" height="740" viewBox="0 0 368 900" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_7_7)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 820.061C74.3038 715.639 118 587.922 118 450C118 312.078 74.3038 184.361 0 79.9392V820.061Z" fill="#FFD029"/>
+<path data-planet="solen" fill-rule="evenodd" clip-rule="evenodd" d="M0 820.061C74.3038 715.639 118 587.922 118 450C118 312.078 74.3038 184.361 0 79.9392V820.061Z" fill="#FFD029"/>
 </g>
 <defs>
 <filter id="filter0_d_7_7" x="-250" y="-170.061" width="618" height="1240.12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -39,29 +39,27 @@
 
 <section class="planets">
     <svg width="1100" height="188" viewBox="0 0 1169 188" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle id="1" data-planet="merkurius" cx="7" cy="94" r="7" fill="#888888"/>
-<circle id="2" data-planet="venus" cx="90" cy="94" r="13" fill="#E7CDCD"/>
-<circle id="3" data-planet="jorden" cx="186" cy="94" r="14" fill="#428ED5"/>
-<circle id="4" data-planet="mars" cx="277" cy="94" r="7" fill="#EF5F5F"/>
-<circle id="5" data-planet="jupiter" cx="467" cy="94" r="94" fill="#E29468"/>
-<circle id="6" data-planet="saturnus" cx="744" cy="94" r="72" fill="#C7AA72"/>
+<circle class="merkurius" id="1" data-planet="merkurius" cx="7" cy="94" r="7" fill="#888888"/>
+<circle class="venus" id="2" data-planet="venus" cx="90" cy="94" r="13" fill="#E7CDCD"/>
+<circle class="jorden" id="3" data-planet="jorden" cx="186" cy="94" r="14" fill="#428ED5"/>
+<circle class="mars" id="4" data-planet="mars" cx="277" cy="94" r="7" fill="#EF5F5F"/>
+<circle class="jupiter" id="5" data-planet="jupiter" cx="467" cy="94" r="94" fill="#E29468"/>
+<circle class="saturnus" id="6" data-planet="saturnus" cx="744" cy="94" r="72" fill="#C7AA72"/>
 <ellipse cx="744" cy="94" rx="109.116" ry="2.75039" transform="rotate(-30 744 94)" fill="white" fill-opacity="0.4"/>
-<circle id="7" data-planet="uranus" cx="966" cy="94" r="33" fill="#C9D4F1"/>
-<circle id="8" data-planet="neptunus" cx="1136" cy="94" r="33" fill="#7A91A7"/>
+<circle class="uranus" id="7" data-planet="uranus" cx="966" cy="94" r="33" fill="#C9D4F1"/>
+<circle class="neptunus" id="8" data-planet="neptunus" cx="1136" cy="94" r="33" fill="#7A91A7"/>
 </svg>
 </section>
 
-<section class="modal hidden">
+<section class="planet-details" style="display: none;">
 
 <form>
     <button class="x">&times;</button>
 <h1 id="planetName"></h1>
-<p id="planetRubrik"></p>
+<p id="planetTitle"></p>
 <p id="planetInfo"></p>
 </form>
 </section>
-
-<section class="overlay hidden"></section>
 </main>
 
 
