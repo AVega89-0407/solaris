@@ -142,16 +142,19 @@ background: #C4C4C4;
   background: #c7aa72;
 }
 
-.Ellipse10 {
-  position: absolute;
-  width: 218.23px;
-  height: 5.5px;
-  left: 851.13px;
-  top: 393.06px;
-  border-radius: 50%;
+.saturnus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    width: 250px; 
+    height: 4px; 
+    background: rgba(255, 255, 255, 0.7); 
 
-  background: rgba(255, 255, 255, 0.4);
-  transform: rotate(-30deg);
+    border-radius: 50% / 50%; 
+
+    transform: translate(-50%, -50%) rotate(-30deg); 
+    z-index: 1;
 }
 
 .uranus {
@@ -225,16 +228,6 @@ background: #C4C4C4;
     line-height: 1.5;
 }
 
-#infoList {
-    width: 100%;
-    max-width: 640px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
-
 #planetInfo {
     display: flex;
     justify-self: space-between;
@@ -245,6 +238,17 @@ background: #C4C4C4;
     font-size: 14px;
     letter-spacing: 3px;
     font-family: 'Roboto';
+}
+
+#infoList {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    border-bottom: 1px solid #1f2a58;
 }
 
 
@@ -274,6 +278,7 @@ background: #C4C4C4;
 
 #planetTempNight {
     padding-top: 2rem;
+    padding-bottom: 2rem;
     color: white;
     font-size: 14px;
     letter-spacing: 3px;

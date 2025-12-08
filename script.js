@@ -12,33 +12,53 @@ const planetDetails = document.querySelector(".planet-details")
 
 let planets = [];
 
-//hämtar API-url och API-nyckeln
+//hämtar API-nyckeln dynamiskt
+async function getApiKey() {
+  try {
+    const resp = await fetch("https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com/key");
+    const data = await resp.json
+
+    return data.key; //sparar nyckeln
+  } catch (error) {
+    console.error("Error fetching API key:", error.message);
+  }
+}
+
+//en funktion för att hämta data från API:et
 async function loadPlanets() {
  try {
-  let resp = await fetch('https://corsproxy.io/?https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com/bodies', {
-    method: 'GET',
-    headers: {'x-zocom': 'solaris-HipRojQEq5sRjt3s'}
-})
+  const apiKey = await getApiKey(); //hämtar nyckeln först
 
-let data = await resp.json();
+
+// hämtar planetdata
+  const resp = await fetch("https://corsproxy.io/?https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com/bodies", {
+    method: 'GET',
+    headers: {'x-zocom': apiKey}
+  });
+
+  const data = await resp.json();
 planets = data.bodies;
 
 console.log(data);
+
 } catch (error) {
-  console.error("Error:", error.message);
+  console.error("Error loading planets:", error.message);
+
+} 
   
 }
-}
 
 
-//funktion för att visa varje planet
+//funktion för att hämta varje planets data
 function showPlanet(planetNameToShow) {
+  //hitta planeten vars namn matchar det man klickar på (jämförs i lowercase för att undvika stora/små bokstavsproblem)
 const planet = planets.find(p => p.name.toLowerCase() === planetNameToShow.toLowerCase());
 
 if (!planet) {
-  alert("Planet not found!");
+  alert("Planet not found!"); //om ingen planet hittas så kommer en alert
   return;
 }
+
 
 
 //informationen som ska synas i overlayen
@@ -56,14 +76,13 @@ document.getElementById("planetTempDay").innerHTML =
   `<strong>MAX TEMPERATUR:</strong><br> ${planet.temp.day}°C`; 
 
 document.getElementById("planetTempNight").innerHTML = 
-  `<strong>MIN TEMPERATUR:</strong><br> ${planet.temp.night}°C<br><br>`; 
+  `<strong>MIN TEMPERATUR:</strong><br> ${planet.temp.night}°C`; 
 
 document.getElementById("planetMoons").innerHTML = 
   `<strong>MÅNAR:</strong><br> ${planet.moons.length}`;
 
 
-
-
+//visar overlayen
 overlay.classList.remove("hidden");
 } 
 
@@ -85,5 +104,5 @@ document.querySelectorAll("[data-planet]").forEach(planetElement => {
 
 });
 
-//laddar om sidan och hämtar API på nytt
+//när hela sidan (HTML, CSS) har laddats klart, körs funktionen loadPlanets automatiskt
 window.onload = loadPlanets();
