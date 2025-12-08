@@ -1,7 +1,7 @@
-const x = document.querySelector(".x")
+//Hämtar overlay-elementet som ska visas när man klickar på en planet
 const overlay = document.getElementById("overlay");
 
-
+//hämtar några element från overlayen där det kommer att fyllas i planetens information
 const planetName = document.getElementById("planetName");
 const planetTitle = document.getElementById("planetTitle");
 const planetInfo = document.getElementById("planetInfo");
@@ -10,7 +10,7 @@ const planetDetails = document.querySelector(".planet-details")
 
 
 
-let planets = [];
+let planets = []; //skapar tom array som senare kommer fyllas med alla planetdata från API:et
 
 //hämtar API-nyckeln dynamiskt
 async function getApiKey() {
@@ -61,7 +61,7 @@ if (!planet) {
 
 
 
-//informationen som ska synas i overlayen
+//informationen som ska synas i overlayen som är hämtat från API:et 
 planetName.innerText = planet.name;
 planetTitle.innerText = planet.latinName;
 planetInfo.innerText = planet.desc;
@@ -92,7 +92,7 @@ overlay.addEventListener("click", () => {
 })
 
   
-//Hämtar varje enskild planet när man klickar på en planet
+//Hittar alla som har data-planet attributet och lägger till en klickhändelse på dem
 document.querySelectorAll("[data-planet]").forEach(planetElement => {
 
   planetElement.addEventListener('click', () => {
