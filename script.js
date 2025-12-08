@@ -16,7 +16,7 @@ let planets = []; //skapar tom array som senare kommer fyllas med alla planetdat
 async function getApiKey() {
   try {
     const resp = await fetch("https://4a6l0o1px9.execute-api.eu-north-1.amazonaws.com/key");
-    const data = await resp.json
+    const data = await resp.json();
 
     return data.key; //sparar nyckeln
   } catch (error) {
