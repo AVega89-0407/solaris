@@ -196,7 +196,7 @@ background: #C4C4C4;
     height: 100vh;
 
 
-    background: url("/assets/stars.svg") center no-repeat,
+    background: url("assets/stars.svg") center no-repeat,
     linear-gradient(135deg, #0a0f26 0%, #1f2a58 100%);
     z-index: 1;
 }
